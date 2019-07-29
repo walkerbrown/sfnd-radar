@@ -19,7 +19,7 @@ Instructions for installing the latest version of Matlab can be found at https:/
 ## Project writeup
 
 ### Implementation steps for the 2D CFAR process
-_See Lines 131-198 in script Radar_Target_Generation_and_Detection.m_
+_Lines 131-198 in script Radar_Target_Generation_and_Detection.m_
 
 The 2D constant false alarm rate (CFAR), when applied to the results of the 2D FFT, uses a dynamic threshold set by the noise level in the vicinity of the cell under test (CUT). The key steps are as follows:
 1. Loop over all cells in the range and doppler dimensions, starting and ending at indices which leave appropriate margins
@@ -28,7 +28,7 @@ The 2D constant false alarm rate (CFAR), when applied to the results of the 2D F
 4. Find the mean noise level among the training cells
 5. Convert this average value back from power to dB
 6. Add the offset (in dB) to set the dynamic threshold
-7. Apply the threshold and store the result in a binary array of the same dimensions as the range doppler map (RDM).
+7. Apply the threshold and store the result in a binary array of the same dimensions as the range doppler map (RDM)
 
 ```
 for range_index = Tr + Gr + 1 : Nr/2 - Tr - Gr
